@@ -1,0 +1,33 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"noEmit": true,
+		"noEmitOnError": true,
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"outDir": "./build/",
+		"removeComments": false,
+		"jsx": "react",
+
+		"strict": true,
+
+		// enable the new reflection API
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+
+		"resolveJsonModule": true,
+		"sourceMap": false,
+		"rootDir": ".",
+		"target": "es6"
+	},
+	"include": [
+		"**/*.ts"
+	],
+	"exclude": [
+		"build/**",
+		"node_modules/**"
+	]
+}

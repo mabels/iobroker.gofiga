@@ -1,0 +1,78 @@
+{
+    "common": {
+        "name": "gofiga",
+        "version": "1.0.0",
+        "news": {
+            "1.0.0": {
+                "en": "Initial release",
+                "de": "Initiale Version"
+            }
+        },
+        "title": "Google FireBase Gateway",
+        "titleLang": {
+            "de": "GoFiGa",
+            "en": "GoFiGa"
+        },
+        "desc": {
+            "en": "Communicates with Google FireBase Gateway",
+            "de": "Kommuniziert mit Google FireBase Gateway"
+        },
+        "authors": [
+            "Meno Abels <meno.abels@adviser.com>"
+        ],
+        "platform": "Javascript/Node.js",
+        "main": "build/main.js",
+        "mode": "daemon",
+        "icon": "firebase_logo_shot.png",
+        "enabled": false,
+        "extIcon": "https://raw.githubusercontent.com/mabels/ioBroker.gofiga/master/admin/firebase_logo_shot.png",
+        "keywords": [
+            "google",
+            "firebase",
+            "gateway"
+        ],
+        "readme": "https://github.com/mabels/ioBroker.gofiga/blob/master/README.md",
+        "loglevel": "info",
+        "type": "gateway",
+        "messagebox": true,
+        "materialize": true,
+        "compact": true,
+        "dependencies": [
+            {
+                "admin": ">=3.0.0"
+            }
+        ]
+    },
+    "native": {
+        "firebaseUrl": "",
+        "oauthToken": ""
+    },
+    "protectedNative": [
+        "firebaseUrl",
+        "oauthToken"
+    ],
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Adapter-Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Whether the adapter is connected to the gateway",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}
